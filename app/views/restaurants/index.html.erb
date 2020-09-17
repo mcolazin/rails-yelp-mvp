@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+
+  <div class="container">
+    <h1> Lista de restaurantes em São Paulo</h1>
+    <ul class = "restaurants_list">
+    <% @restaurants.each do |restaurant| %>
+      <li> <%= link_to "#{restaurant.name}", "restaurants/#{restaurant.id}"  %> </li>
+    <% end %>
+    </ul>
+  </div>
+  <br><br>
+  <div class="link_new">
+    <%= link_to "Registrar Novo Restaurante", restaurants_new_path %>
+  </div>
+
+</body>
+</html>
